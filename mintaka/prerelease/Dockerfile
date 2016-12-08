@@ -16,8 +16,10 @@ COPY InfChests.dll /opt/tshock/ServerPlugins/InfChests.dll
 
 # Start the server and expose the port
 EXPOSE 7777 7878
-ENV TERRARIA_WORLD=Default.wld
+
 VOLUME /opt/tshock-server/tshock
+VOLUME /opt/tshock-server/Terraria/Worlds
+
 WORKDIR /opt/tshock-server
 ENTRYPOINT ["mono", "--server", "--gc=sgen", "-O=all", "TerrariaServer.exe"]
-CMD ["-world", "Terraria/Worlds/${TERRARIA_WORLD}", "-autocreate", "3"]
+CMD ["-world", "Terraria/Worlds/Default.wld", "-autocreate", "3"]

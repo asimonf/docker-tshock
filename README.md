@@ -27,7 +27,4 @@ The second one is for containing the configuration and data files.
 
 If you wish to override the configuration or the starting worlds, you can mount
 the volumes to a host folder and create the necessary files before starting the
-container. You might also wish to link it to mysql, for example. 
-
-The container also uses an enviroment variable to select the world file. The
-environment variable is TERRARIA_WORLD.
+container. You might also wish to link it to mysql, for example.
