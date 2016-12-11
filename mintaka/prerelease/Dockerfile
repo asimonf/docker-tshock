@@ -12,7 +12,7 @@ RUN curl -sL https://github.com/NyxStudios/TShock/releases/download/mintaka-pre1
     unzip /tmp/tshock.zip -d /opt && \
 	mv /opt/tshock* /opt/tshock-server
 
-COPY InfChests.dll /opt/tshock/ServerPlugins/InfChests.dll
+COPY InfChests.dll /opt/tshock-server/ServerPlugins/InfChests.dll
 
 # Start the server and expose the port
 EXPOSE 7777 7878
